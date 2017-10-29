@@ -617,26 +617,6 @@ static bool fba_init(unsigned driver, const char *game_zip_name)
          rotation = 0;
    }
 
-   if(
-         (strcmp("gunbird2", game_zip_name) == 0) ||
-         (strcmp("s1945ii", game_zip_name) == 0) ||
-         (strcmp("s1945iii", game_zip_name) == 0) ||
-         (strcmp("dragnblz", game_zip_name) == 0) ||
-         (strcmp("gnbarich", game_zip_name) == 0) ||
-         (strcmp("mjgtaste", game_zip_name) == 0) ||
-         (strcmp("tgm2", game_zip_name) == 0) ||
-         (strcmp("tgm2p", game_zip_name) == 0) ||
-         (strcmp("soldivid", game_zip_name) == 0) ||
-         (strcmp("daraku", game_zip_name) == 0) ||
-         (strcmp("sbomber", game_zip_name) == 0) ||
-         (strcmp("sbombera", game_zip_name) == 0) 
-
-         )
-   {
-      nBurnBpp = 4;
-   }
-   fprintf(stderr, "Game: %s\n", game_zip_name);
-
    environ_cb(RETRO_ENVIRONMENT_SET_ROTATION, &rotation);
 
    VidRecalcPal();
